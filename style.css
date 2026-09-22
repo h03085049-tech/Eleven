@@ -873,3 +873,363 @@ footer{
   .mc-value{font-size:12.5px;max-width:55%}
 }
 
+/* ============================================================
+   22. RESPONSIVE — FULL MOBILE FIX
+============================================================ */
+
+/* ---------- TABLET (max 1080px) ---------- */
+@media (max-width: 1080px){
+  .nav-links{display:none}
+  .burger{display:grid}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-visual{position:relative;top:0}
+  .about-img{aspect-ratio:16/10;max-height:520px}
+  .join-grid{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .gitem:nth-child(1){grid-column:span 2;grid-row:span 1;aspect-ratio:16/10}
+  .gitem:nth-child(6){grid-column:span 2;aspect-ratio:16/9}
+  .hs-track{gap:20px}
+  .pcard{width:clamp(260px,36vw,380px)}
+}
+
+/* ---------- MOBILE / HORIZONTAL SCROLL FIX (max 900px) ---------- */
+@media (max-width: 900px){
+
+  /* Programs section — normal vertical cards */
+  .hscroll{height:auto !important;padding:60px 0}
+  .hscroll-sticky{
+    position:relative !important;
+    height:auto !important;
+    padding:0 !important;
+    display:block !important;
+  }
+  .hs-head{padding:0 5vw 26px !important}
+  .hs-track{
+    transform:none !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:18px !important;
+    padding:0 5vw !important;
+    overflow:visible !important;
+  }
+  .pcard{
+    width:100% !important;
+    height:auto !important;
+    min-height:340px !important;
+    flex:none !important;
+  }
+  .pc-body h3{font-size:26px}
+  .pc-body p{max-height:none !important;opacity:1 !important;margin-bottom:14px !important}
+  .hs-progress{display:none !important}
+
+  /* Trainers grid */
+  .trainers-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .tcard-body{transform:translateY(0) !important;padding:20px 18px}
+  .tcard-body p,
+  .tcard-soc{opacity:1 !important}
+  .tcard-body h3{font-size:22px}
+  .tcard-body span{font-size:10px}
+
+  /* Custom cursor off */
+  .cur-dot,.cur-ring{display:none !important}
+
+  /* Parallax off */
+  .hero-bg{transform:none !important}
+}
+
+/* ---------- MOBILE (max 640px) ---------- */
+@media (max-width: 640px){
+
+  /* Base font */
+  html{font-size:15px;scroll-padding-top:76px}
+  body{overflow-x:hidden}
+
+  /* Wrap */
+  .wrap{width:94vw}
+  .sec{padding:60px 0}
+
+  /* Navbar */
+  .nav-inner{
+    padding:10px 14px !important;
+    margin:10px auto !important;
+    border-radius:100px;
+  }
+  .logo-mark{width:36px;height:36px;font-size:16px}
+  .logo-text{font-size:17px;letter-spacing:.12em}
+  .nav-right .btn{display:none}
+  .burger{width:42px;height:42px}
+  .burger span{width:16px}
+
+  /* Mobile menu */
+  .mobile-menu{padding:90px 6vw 40px}
+  .mobile-menu a{font-size:clamp(28px,9vw,42px);padding:12px 0}
+
+  /* HERO */
+  .hero{
+    min-height:100svh !important;
+    padding:100px 0 60px !important;
+  }
+  .hero-inner{width:92vw}
+  .hero-badge{
+    font-size:9.5px !important;
+    padding:7px 14px !important;
+    letter-spacing:.2em !important;
+    margin-bottom:20px !important;
+  }
+  .hero h1{
+    font-size:clamp(44px,14vw,68px) !important;
+    line-height:.9 !important;
+    margin-bottom:18px !important;
+  }
+  .hero p.lead{
+    font-size:14px !important;
+    margin-bottom:26px !important;
+    max-width:100%;
+  }
+  .hero-actions{gap:10px;flex-direction:column}
+  .hero-actions .btn{width:100%;padding:16px 24px;font-size:14px}
+  .hero-stats{
+    grid-template-columns:1fr 1fr !important;
+    gap:18px !important;
+    margin-top:36px !important;
+    padding-top:24px !important;
+  }
+  .hstat b{font-size:32px}
+  .hstat span{font-size:9.5px;letter-spacing:.2em}
+  .scroll-cue{display:none}
+
+  /* Marquee */
+  .marquee{padding:16px 0}
+  .marquee-track span{font-size:22px;padding:0 18px;gap:18px}
+
+  /* Section headings */
+  .sec-head{margin-bottom:32px}
+  .sec-title{font-size:clamp(34px,11vw,52px) !important;line-height:.95 !important;margin:14px 0 12px !important}
+  .sec-sub{font-size:14px}
+  .eyebrow{font-size:10px;letter-spacing:.26em}
+
+  /* About */
+  .about-img{aspect-ratio:4/3;max-height:340px}
+  .about-tag{padding:12px 16px;left:14px;bottom:14px}
+  .about-tag b{font-size:24px}
+  .about-tag span{font-size:9px}
+  .about-copy h3{font-size:28px;line-height:1.05}
+  .about-copy p{font-size:14.5px}
+  .feat{padding:16px;gap:12px}
+  .feat-ico{width:38px;height:38px}
+  .feat-ico svg{width:16px;height:16px}
+  .feat h4{font-size:14px}
+  .feat p{font-size:12.5px}
+
+  /* Programs mobile cards */
+  .hs-head{padding:0 4vw 20px !important}
+  .hs-track{padding:0 4vw !important;gap:14px !important}
+  .pcard{min-height:300px !important;border-radius:20px}
+  .pc-body{padding:22px 20px}
+  .pc-num{font-size:11px}
+  .pc-body h3{font-size:24px !important}
+  .pc-body p{font-size:13px}
+
+  /* Trainers */
+  .trainers-grid{grid-template-columns:1fr !important;gap:14px}
+  .tcard{aspect-ratio:4/3}
+  .tcard-body{padding:18px 16px !important}
+  .tcard-body h3{font-size:22px !important}
+
+  /* PRICING */
+  .billing-toggle{
+    margin-top:18px !important;
+    padding:5px !important;
+    width:100%;
+    max-width:320px;
+  }
+  .billing-toggle button{
+    padding:10px 16px !important;
+    font-size:12px !important;
+    flex:1;
+  }
+  .save-pill{font-size:9px;padding:3px 7px}
+
+  .plans{grid-template-columns:1fr !important;gap:18px}
+  .plan{padding:28px 22px !important}
+  .plan-badge{top:16px;right:16px;font-size:9px;padding:5px 12px}
+  .plan h3{font-size:26px}
+  .plan .pdesc{font-size:12.5px;margin-bottom:20px}
+  .price .amt{font-size:44px !important}
+  .price .cur{font-size:16px}
+  .price .per{font-size:11px}
+  .price-note{margin-bottom:22px;font-size:11.5px}
+  .plan ul{gap:11px;margin-bottom:26px}
+  .plan li{font-size:13.5px}
+  .plan li svg{width:15px;height:15px}
+
+  /* JOIN FORM */
+  .join-wrap{
+    padding:28px 18px !important;
+    border-radius:24px !important;
+  }
+  .join-wrap::before{width:280px;height:280px;top:-100px;right:-100px}
+  .join-info h3{font-size:30px;line-height:1}
+  .join-info p{font-size:14px;margin-bottom:22px}
+  .info-row{padding:13px 0;gap:12px}
+  .info-ico{width:36px;height:36px}
+  .info-ico svg{width:16px;height:16px}
+  .info-row b{font-size:13px}
+  .info-row span{font-size:12px}
+
+  /* Form fields */
+  .steps-bar{gap:8px;margin-bottom:22px}
+  .step-label{font-size:10px;letter-spacing:.16em;margin-bottom:18px}
+
+  .fgrid{grid-template-columns:1fr !important;gap:0 !important}
+  .field{margin-bottom:14px}
+  .field label{font-size:10.5px;letter-spacing:.14em}
+  .field input,
+  .field select,
+  .field textarea{
+    padding:13px 15px !important;
+    font-size:14px !important;
+    border-radius:12px;
+  }
+  .field textarea{min-height:80px}
+
+  .plan-picker{grid-template-columns:1fr !important;gap:10px}
+  .pp{padding:14px 14px !important}
+  .pp b{font-size:19px}
+  .pp span{font-size:12px}
+
+  .pay-tabs{grid-template-columns:1fr 1fr !important;gap:8px}
+  .pt{padding:12px 8px !important;font-size:11.5px !important}
+
+  .summary{padding:18px 16px;margin-bottom:18px}
+  .summary-row{font-size:13px;padding:6px 0}
+  .summary-row.total{font-size:15px}
+  .summary-row.total span:last-child{font-size:22px}
+
+  .bank-box{padding:14px;font-size:12.5px;line-height:1.8}
+
+  .form-nav{flex-direction:column;gap:10px}
+  .form-nav .btn{width:100%;padding:15px 20px;font-size:13.5px}
+
+  /* GALLERY */
+  .gal{grid-template-columns:1fr !important;gap:12px}
+  .gitem,
+  .gitem:nth-child(1),
+  .gitem:nth-child(6){
+    grid-column:span 1 !important;
+    grid-row:span 1 !important;
+    aspect-ratio:4/3 !important;
+    border-radius:16px;
+  }
+
+  /* TESTIMONIALS */
+  .tst{min-height:auto}
+  .tst-slide p{font-size:18px !important;line-height:1.55;margin-bottom:24px}
+  .tst-stars svg{width:15px;height:15px}
+  .tst-av{width:46px;height:46px}
+  .tst-who b{font-size:13.5px}
+  .tst-who span{font-size:11px}
+  .tst-nav{margin-top:26px}
+
+  /* CTA BAND */
+  .cta-band{
+    padding:44px 22px !important;
+    border-radius:22px !important;
+  }
+  .cta-band h2{font-size:clamp(32px,10vw,48px) !important;line-height:1}
+  .cta-band p{font-size:14px;margin-bottom:26px}
+  .cta-band .btn{width:100%}
+
+  /* CONTACT */
+  .ccard{padding:16px;gap:12px}
+  .ccard .info-ico{width:38px;height:38px}
+  .ccard b{font-size:13px}
+  .ccard a,.ccard span{font-size:12.5px}
+  .map-box{min-height:280px}
+  .map-box iframe{min-height:280px}
+  .map-overlay{padding:12px 14px;left:12px;bottom:12px;max-width:calc(100% - 24px)}
+  .map-overlay b{font-size:16px}
+  .map-overlay span{font-size:11.5px}
+
+  .socials{gap:8px}
+  .socials a{width:40px;height:40px;border-radius:12px}
+  .socials svg{width:16px;height:16px}
+
+  /* FOOTER */
+  .f-grid{grid-template-columns:1fr !important;gap:32px;margin-bottom:36px}
+  .f-col h4{font-size:11px;margin-bottom:14px}
+  .f-col a{font-size:13px;padding:5px 0}
+  .f-col p{font-size:13px}
+  .f-bottom{
+    flex-direction:column;
+    text-align:center;
+    gap:10px;
+    font-size:11.5px;
+  }
+
+  /* FLOATING BUTTONS */
+  .wa-float{width:52px;height:52px;right:14px;bottom:14px}
+  .wa-float svg{width:25px;height:25px}
+  .to-top{width:42px;height:42px;right:16px;bottom:76px}
+
+  /* MODAL */
+  .modal{padding:16px}
+  .modal-card{
+    padding:40px 20px 26px !important;
+    border-radius:24px !important;
+    max-height:92vh;
+    overflow-y:auto;
+  }
+  .modal-check{width:82px;height:82px;margin-bottom:20px}
+  .check-svg{width:60px;height:60px}
+  .modal-eyebrow{font-size:9.5px;padding:5px 12px}
+  .modal-title{font-size:30px !important}
+  .modal-desc{font-size:13px;margin-bottom:20px}
+  .member-card{padding:16px 14px 12px;border-radius:16px;margin-bottom:20px}
+  .mc-mark{width:24px;height:24px;font-size:12px}
+  .mc-name{font-size:13px;letter-spacing:.14em}
+  .mc-badge{font-size:8px;padding:4px 8px}
+  .mc-mid{gap:7px;margin-bottom:14px}
+  .mc-label{font-size:9px}
+  .mc-value{font-size:12.5px;max-width:55%}
+  #refCode{font-size:14px}
+  .modal-actions .btn{padding:14px 20px;font-size:13.5px}
+  .modal-foot{font-size:10.5px}
+  .modal-x{width:34px;height:34px;top:12px;right:12px}
+}
+
+/* ---------- SMALL MOBILE (max 380px) ---------- */
+@media (max-width: 380px){
+  .hero h1{font-size:40px !important}
+  .sec-title{font-size:30px !important}
+  .hstat b{font-size:26px}
+  .plans .plan{padding:22px 16px !important}
+  .price .amt{font-size:38px !important}
+  .join-wrap{padding:22px 14px !important}
+}
+
+/* ---------- LANDSCAPE MOBILE ---------- */
+@media (max-width: 900px) and (orientation: landscape){
+  .hero{min-height:auto;padding:120px 0 60px}
+  .hero h1{font-size:clamp(40px,9vw,60px)}
+}
+
+/* ---------- TOUCH DEVICE — remove hover effects ---------- */
+@media (hover: none){
+  .btn:hover::after{left:-130%}
+  .plan:hover{transform:none}
+  .tcard:hover{transform:none}
+  .ccard:hover{transform:none}
+  .gitem:hover{transform:none}
+}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration:.01ms !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}

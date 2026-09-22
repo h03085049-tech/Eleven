@@ -776,3 +776,11 @@ setTimeout(() => {
   }, 1200);
 
 }, 2200);
+function update() {
+  // Mobile pe kuch na karo
+  if (window.innerWidth <= 900) {
+    track.style.transform = 'none';
+    return;
+  }
+  // ...baaki code same
+}
